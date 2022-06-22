@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>포켓몬도감만들기</title>
+    <title>강아지 종 분류 인공지능</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>나만의 포켓몬도감만들기</h1>
-    <p>피카츄, 파이리, 꼬부기를 구별해서 이에 대한 설명을 보여주는 웹 앱</p>
+    <h1>강아지 종 분류 인공지능</h1>
+    <p>강아지 사진을 보여주면 어떤 종인지 알려주는 프로그램</p>
     <button type="button" onclick="init()">Start</button>
     <button type="button" onclick="predict()">Predict</button>
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -42,7 +42,7 @@
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
         // the link to your model provided by Teachable Machine export panel
-        const URL = "https://teachablemachine.withgoogle.com/models/zt9akGJHs/";
+        const URL = "https://teachablemachine.withgoogle.com/models/peh9f5ldF/";
 
         let model, webcam, labelContainer, maxPredictions;
 
@@ -76,17 +76,20 @@
             var image = document.getElementById("my-image")
             const prediction = await model.predict(image, false);
             if(prediction[0].probability > 0.7){
-                labelContainer.childNodes[0].innerHTML = "위 포켓몬은 피카츄입니다."
-                labelContainer.childNodes[1].innerHTML = "피카츄는 포켓몬스터에 등장하는 가상의 생명체이다. 애니메이션과 비디오게임에서는 오오타니 이쿠에가 그 목소리를 맡고 있다. 귀여운 전기 포켓몬을 그려달라는 스기모리 켄의 주문을 받아 니시다 아쓰코가 디자인하였다. 포켓몬 애니메이션에서 주인공 지우의 첫 포켓몬이자 파트너이다."
-            }
+                labelContainer.childNodes[0].innerHTML = "위 강아지는 말티즈입니다."
+               }
             else if(prediction[1].probability > 0.7){
-                labelContainer.childNodes[0].innerHTML = "위 포켓몬은 파이리입니다."
-                labelContainer.childNodes[1].innerHTML = "《파이리》는 포켓몬스터 시리즈에 등장하는 가공의 캐릭터이다. 한국명인 '파이리'는 영어로 불을 뜻하는 'Fire'와 꼬리의 합성어이다."
-            }
+                labelContainer.childNodes[0].innerHTML = "위 강아지는 시츄입니다."
+                }
             else if(prediction[2].probability > 0.7){
-                labelContainer.childNodes[0].innerHTML = "위 포켓몬은 꼬부기입니다."
-                labelContainer.childNodes[1].innerHTML = "《꼬부기》는 포켓몬스터 시리즈에 등장하는 가공의 캐릭터이다. 분류는 꼬마거북 포켓몬이다."
-            }
+                labelContainer.childNodes[0].innerHTML = "위 강아지는 보더콜리입니다."
+                }
+            else if(prediction[3].probability > 0.7){
+                labelContainer.childNodes[0].innerHTML = "위 강아지는 빠삐용입니다."
+                }
+            else if(prediction[4].probability > 0.7){
+                labelContainer.childNodes[0].innerHTML = "위 강아지는 비글입니다."
+                }
             else{
                 labelContainer.childNodes[0].innerHTML = "모르겠습니다."
             }
