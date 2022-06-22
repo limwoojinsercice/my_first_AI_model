@@ -77,23 +77,23 @@
             const prediction = await model.predict(image, false);
             if(prediction[0].probability > 0.7){
                 labelContainer.childNodes[0].innerHTML = "위 강아지는 말티즈입니다."
-                labelContainer.childNodes[0].innerHTML = "작은 체구와 깨끗해 보이는 하얀 털을 가진 귀여운 외모로 한국에서 반려견으로 인기가 많은 종이다."
+                labelContainer.childNodes[1].innerHTML = "작은 체구와 깨끗해 보이는 하얀 털을 가진 귀여운 외모로 한국에서 반려견으로 인기가 많은 종이다."
                }
             else if(prediction[1].probability > 0.7){
                 labelContainer.childNodes[0].innerHTML = "위 강아지는 시츄입니다."
-                labelContainer.childNodes[0].innerHTML = "'시쭈' 혹은 '시츄'라고 하기도 한다. 이름의 유래는 사자. 성격은 모든 견종 중에서 가장 온순한 편이다. 대중적인 견종 중에서 가장 공격성이 낮으며, 가장 덜 짖는 견종으로 알려져 있다."
+                labelContainer.childNodes[1].innerHTML = "'시쭈' 혹은 '시츄'라고 하기도 한다. 이름의 유래는 사자. 성격은 모든 견종 중에서 가장 온순한 편이다. 대중적인 견종 중에서 가장 공격성이 낮으며, 가장 덜 짖는 견종으로 알려져 있다."
                 }
             else if(prediction[2].probability > 0.7){
                 labelContainer.childNodes[0].innerHTML = "위 강아지는 보더콜리입니다."
-                labelContainer.childNodes[0].innerHTML = "세계에서 가장 머리가 좋은 개로 유명하며 그 명성에 걸맞게 학습 능력이 매우 뛰어나다. 또한 어린 보더 콜리와 나이 든 보더 콜리를 같이 기르면, 노견이 어린 개에게 주인이 사용하는 명령어와 기타 생활에 대해 교육한다고 한다."
+                labelContainer.childNodes[1].innerHTML = "세계에서 가장 머리가 좋은 개로 유명하며 그 명성에 걸맞게 학습 능력이 매우 뛰어나다. 또한 어린 보더 콜리와 나이 든 보더 콜리를 같이 기르면, 노견이 어린 개에게 주인이 사용하는 명령어와 기타 생활에 대해 교육한다고 한다."
                 }
             else if(prediction[3].probability > 0.7){
                 labelContainer.childNodes[0].innerHTML = "위 강아지는 빠삐용입니다."
-                labelContainer.childNodes[0].innerHTML = "소형견으로서 여우와 닮은 외모를 가지고 있다. 큰 귀와 풍성한 귀털이 특징이다. 귀가 오똑하게 서있는 모습을 뒤에서 바라보면 나비와 닮았다고 해서 빠삐용(Papillon) - 프랑스어로 나비라는 뜻 - 이라 불리게 되었다. "
+                labelContainer.childNodes[1].innerHTML = "소형견으로서 여우와 닮은 외모를 가지고 있다. 큰 귀와 풍성한 귀털이 특징이다. 귀가 오똑하게 서있는 모습을 뒤에서 바라보면 나비와 닮았다고 해서 빠삐용(Papillon) - 프랑스어로 나비라는 뜻 - 이라 불리게 되었다. "
                 }
             else if(prediction[4].probability > 0.7){
                 labelContainer.childNodes[0].innerHTML = "위 강아지는 비글입니다."
-                labelContainer.childNodes[0].innerHTML = "비글의 이름은 ‘요란하게 짖는다’, 또는 ‘작다’를 나타내는 프랑스어에서 유래됐다. 소형 동물을 잘 사냥하는 하운드종 이다. 사냥개인 하운드 중에서 제일 작으며 사냥을 잘하는 개답게 행동이 민첩하여 애완용으로 기르기도 했다."
+                labelContainer.childNodes[1].innerHTML = "비글의 이름은 ‘요란하게 짖는다’, 또는 ‘작다’를 나타내는 프랑스어에서 유래됐다. 소형 동물을 잘 사냥하는 하운드종 이다. 사냥개인 하운드 중에서 제일 작으며 사냥을 잘하는 개답게 행동이 민첩하여 애완용으로 기르기도 했다."
                 }
             else{
                 labelContainer.childNodes[0].innerHTML = "모르겠습니다."
